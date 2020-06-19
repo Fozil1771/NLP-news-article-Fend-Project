@@ -1,4 +1,4 @@
-import {checkForUrl,} from './urlChecker';
+import {checkForUrl} from './urlChecker';
 
 test("It should return true", async () => {
         expect(checkForUrl).toBeDefined();
