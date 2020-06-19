@@ -4,7 +4,7 @@ This is Frontend application using Aylien api to analize text
 
 ## Prerequisites 
  
- In order to run this app, node and npm should be installed into your machine
+ In order to run this app, `node` and `npm` should be installed into your machine
 
 ## Install
 
