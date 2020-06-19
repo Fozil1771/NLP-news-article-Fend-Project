@@ -1,0 +1,31 @@
+@import './resets.scss';
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background-color: $dark-color;
+    color: #fff;
+   
+    #{&}__logo {
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    #{&}__navig {
+        @extend .navbar__logo;
+    }
+    #{&}__logo, #{&}__navig {
+        animation: .5s animHead 1s 1 ease-out forwards;
+    }
+
+}
+
+@keyframes animHead {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

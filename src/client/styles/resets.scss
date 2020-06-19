@@ -1,0 +1,57 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+$dark-color:  #070608cb;
+@mixin theme($light-theme: false) {
+	@if $light-theme{
+	background: #272727;
+	color: lighten(#fff, 100%);
+	.jumbotron{
+		background-color: #272727;
+		color: #fff;
+	}
+	}
+}
+
+html, body{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	
+}
+.light {
+	@include theme(true);
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+    
+    &:before, &:after {
+        content: '';
+        content: none;
+    }
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ul {
+    list-style-type: none;
+}

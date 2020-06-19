@@ -1,0 +1,54 @@
+@mixin  flexBox($direction){
+    display: flex;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+body {
+    @include flexBox(column);
+    min-height: 100vh;
+}
+
+main {
+    flex: 2;
+}
+
+// .validUrl {
+//     // display: none;
+// }
+
+.form {
+    max-width: 800px;
+    margin: 50px auto;
+   
+
+    #{&}__heading {
+        @include flexBox(column);
+        align-items: center;
+        border-bottom: 1px solid;
+    }
+
+    #{&}__input {
+        margin: 2rem;
+    }
+    #{&}__output {
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    #{&}__polarity {
+        @include flexBox(column);
+       border: 1px solid;
+       padding: 1rem;
+       margin: 0 .5rem 0 .5rem;
+    }
+    #{&}__subjectivity {
+        @extend .form__polarity;
+    }
+    #{&}__text {
+        @extend .form__polarity;
+        margin: .5rem;
+        grid-column: 1/-1;
+    }
+}

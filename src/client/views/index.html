@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    </head>
+    <body class="light">
+
+        <header class="navbar">
+            <div class="navbar__logo">
+                Logo
+            </div>
+            <div class="navbar__navig">
+                home
+            </div>
+        </header>
+
+        <div class="jumbotron d-flex flex-column align-items-center">
+                <h1 class="display-4">NLP</h1>
+                <p class="lead">Natural language processing is a subfield of linguistics, computer science, information engineering, and artificial intelligence concerned with the interactions between computers and human languages, in particular how to program computers to process and analyze large amounts of natural language data.</p>
+                <hr class="my-4">
+                <p>To learn more about, go to the website of AYLIEN.COM</p>
+                <p class="lead">
+                  <a href="https://docs.aylien.com/" class="btn btn-primary btn-lg" href="#" role="button" target="_blank">Learn more</a>
+                </p>
+              </div>
+
+        <main>
+            <hr>
+            <section class="form">
+                    <form class="form__input" onsubmit="return Client.handleSubmit(event)"> 
+                        <div class="form-group">
+                          <label>Text</label>
+                          <input id="name" type="text" class="form-control" name="input" value="" placeholder="Text" aria-describedby="emailHelp">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">Submit</button>
+                      </form>
+                </form>
+            <section>
+            <h2 class="form__heading">Form Results:</h2>
+            <section class="form__output">
+                <div class="form__polarity">
+                    <h3>Text Polarity: </h3>
+                    <p id="polarity"></p>
+                    <h4>Confidence: </h4>
+                    <p id="polarity_confidence"></p>
+                </div>
+                
+                <div class="form__subjectivity">
+                    <h3>Text Subjective: </h3>
+                    <p id="subjective"></p>
+                    <h4>Confidence: </h4>
+                    <p id="subjective_confidence"></p>
+                </div>
+                <div class="form__text">
+                    <h3>Text Excerpt: </h3>
+                    <p class="lead" id="excerpt"></p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__text">Fozil Zayn</p>
+            <p class="footer__space"></p>
+            <p class="footer__text">&copy;2020</p>
+        </footer>
+
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    </body>
+</html>
